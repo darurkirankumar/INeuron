@@ -331,3 +331,583 @@ numbers = [12, 75, 150, 180, 145, 525, 50]
 			if(numbers[i]<=150):
 				print(numbers[i])
 		i = i + 1
+
+Q26. What is a string? How can we declare string in Python?
+
+	String is the collection of the characters surrounded by single quotes, double quotes, or triple quotes in Python. The computer does not understand the characters; internally, it stores manipulated character as the combination of the 0's and 1's.
+	Each character is encoded in the ASCII or Unicode character. So we can say that Python strings are also called the collection of Unicode characters.
+
+	Declaration:
+	string_name='string_value' or string_name="string_value" or string_name="'string_value"' (Triple quotes are generally used for represent the multiline or docstring)
+
+Q27. How can we access the string using its index?
+
+	The index of a string in python starts from 0. We can access the string using slice operator '[]' in Python.
+	Eg:
+	str='iNeuron'
+	print(str[2]) 
+	#Output e
+
+	We can access the substring using : in the slice operator. It can be used as follows:
+	Eg:
+	str='iNeuron'
+	print(str[:])
+	#Output iNeuron
+
+	print(str[0:3])
+	#Output iNe
+
+	print(str[2:5])
+	#Output eur
+
+	print(str[2:-2])
+	#Output eur
+
+	print(str[-1:])
+	#Output n
+
+	print(str[-4:-2])
+	#Output ur
+
+	print(str[-2:-4])
+	#Output nothing
+
+Q28. Write a code to get the desired output of the following
+```
+string = "Big Data iNeuron"
+desired_output = "iNeuron"
+```
+	string = "Big Data iNeuron"
+	print(string[9:])
+
+Q29. Write a code to get the desired output of the following
+```
+string = "Big Data iNeuron"
+desired_output = "norueNi"
+```
+	string = "Big Data iNeuron"
+	print(string[-1:-8:-1])
+
+Q30. Resverse the string given in the above question.
+
+	string = "Big Data iNeuron"
+	print(string[::-1])
+
+Q31. How can you delete entire string at once?
+
+	We can delete entire string at once using 'del' keyword.
+	Ex:
+	string = "Big Data iNeuron"
+	del string
+
+Q32. What is escape sequence?
+
+	An escape sequence is a sequence of characters with special meaning when used inside a string or a character.
+
+	Syntax: The characters need to be preceded by a backslash character
+	Example: \n, \t etc.
+	Ex:
+	string = 'Hi! \'man'  
+	print (string)
+	#Output Hi! 'man  
+
+Q33. How can you print the below string?
+```
+'iNeuron's Big Data Course'
+```
+
+	string='\'iNeuron\'s Big Data Course\''
+	print(string)
+
+	Q34. What is a list in Python?
+
+	A list can be defined as a collection of values or items of different types. The items in the list are separated with the comma (,) and enclosed with the square brackets [].
+	Python lists are mutable type its mean we can modify its element after it created.
+
+	The list has the following characteristics:
+
+	- The lists are ordered.
+	- The element of the list can access by index.
+	- The lists are mutable types.
+	- A list can store the number of various elements.
+
+Q35. How can you create a list in Python?
+
+	A list can be define as below
+	L1 = ["John", 102, "USA"]    
+	L2 = [1, 2, 3, 4, 5, 6]   
+
+	Q36. How can we access the elements in a list?
+
+	The elements in the list can be accessed by the index.
+	Eg:
+	L1 = ["John", 102, "USA"]
+	print(L1[0])
+	#Output John
+
+Q37. Write a code to access the word "iNeuron" from the given list.
+```
+lst = [1,2,3,"Hi",[45,54, "iNeuron"], "Big Data"]
+``` 
+
+	lst = [1,2,3,"Hi",[45,54, "iNeuron"], "Big Data"]
+	print(lst[4][2])
+#Output iNeuron
+
+Q38. Take a list as an input from the user and find the length of the list.
+
+	input_string = input("Enter list elements seperated by comma: ")
+	lstEx  = input_string.split(",")
+	print(len(lstEx))
+
+Q39. Add the word "Big" in the 3rd index of the given list.
+```
+lst = ["Welcome", "to", "Data", "course"]
+```
+
+	lst = ["Welcome", "to", "Data", "course"]
+	lst[3]="Big"
+	print(lst)
+	#Output ['Welcome', 'to', 'Data', 'Big']
+
+Q40. What is a tuple? How is it different from list?
+
+	A tuple is a collection of multiple items in a single variable which is ordered and unchangeable.
+	Tuple items are ordered, unchangeable, and allow duplicate values.
+	Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+
+	Q41. How can you create a tuple in Python?
+
+	my_tuple = ()
+	print(type(my_tuple))
+	#Output <class 'tuple'>
+
+	thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+	print(thistuple)
+	#Output ('apple', 'banana', 'cherry', 'apple', 'cherry')
+
+	thistuple = ("apple",) 
+	#For Tuple with single value, we should give , at the end. Otherwise, it will be considered as a String
+	print(type(thistuple))
+	#Output <class 'tuple'>
+
+Q42. Create a tuple and try to add your name in the tuple. Are you able to do it? Support your answer with reason.
+
+	As mentioned, once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable.
+	But there is a workaround to edit a tuple once it is created. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+
+	Eg:
+	x = ("",)
+	y = list(x)
+	y[0] = "Sai Kiran"
+	x = tuple(y)
+	print(x)
+	#Output ('Sai Kiran',)
+
+Q43. Can two tuple be appended. If yes, write a code for it. If not, why?
+
+	Yes, two tuples can be appended with the help of + operator.
+
+	Eg:
+	tuple1 = ("a", "b" , "c")
+	tuple2 = (1, 2, 3)
+	tuple3 = tuple1 + tuple2
+	print(tuple3)
+	#Output ('a', 'b', 'c', 1, 2, 3)
+
+Q44. Take a tuple as an input and print the count of elements in it.
+
+	TO take input from user, we use input function and a split function to pass a separator. If no separator is provided in split(), it defaultly takes 'space' as the separator.
+
+	Eg:
+	my_tuple = tuple(input('Enter comma-separated words: ').split(','))
+	print(my_tuple)
+	#Enter comma-separated words: 21,22,kiran,hi,34,sai
+	#('21', '22', 'kiran', 'hi', '34', 'sai') 
+
+	If we have not provided the split function, it will consider each character as a seperate value.
+	Eg:
+	my_tuple = tuple(input('Enter space separated words: '))
+	print(my_tuple)
+	#Output Enter space separated words: hi 21 kiran 32
+	#('h', 'i', ' ', '2', '1', ' ', 'k', 'i', 'r', 'a', 'n', ' ', '3', '2') 
+
+Q45. What are sets in Python?
+
+	-Sets are used to store multiple items in a single variable.
+	-Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.
+	-A set is a collection which is unordered, unchangeable*, and unindexed.
+	-Set items are unchangeable, but we can remove items and add new items.
+	-Sets cannot have two items with the same value.
+	-You cannot access items in a set by referring to an index or a key.
+	But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword.
+
+Q46. How can you create a set?
+
+	Sets are represented by curly braces '{}'.
+
+	We can create a set as follows
+	thisset = {"apple", "banana", "cherry"}
+	print(thisset)
+	#Output
+	#{'banana', 'cherry', 'apple'}
+
+Q47. Create a set and add "iNeuron" in your set.
+
+	setEx = {'hello', 'welcome'}
+	print(setEx)
+	setEx.add('iNeuron')
+	print(setEx)
+	#Output 
+	#{'welcome', 'hello'}
+	#{'iNeuron', 'welcome', 'hello'} 
+
+Q48. Try to add multiple values using add() function.
+
+	It is not possible to add multiple values using add() as it only takes one argument.
+
+	setEx = {'hello', 'welcome'}
+	print(setEx)
+	setEx.add('iNeuron', 'hi')
+	print(setEx)
+	#Output
+	#TypeError: add() takes exactly one argument (2 given) 
+
+Q49. How is update() different from add()?
+
+	add() can add only one value to a list. But update() can be used to add multiple items of any iterable object (tuples, lists, dictionaries etc.).
+	Eg:
+	thisset = {"apple", "banana", "cherry"}
+	tropical = {"pineapple", "mango", "papaya"}
+	thisset.update(tropical)
+	print(thisset)
+	#Output {'apple', 'banana', 'papaya', 'pineapple', 'mango', 'cherry'}
+
+Q50. What is clear() in sets?
+
+	clear() removes all the elements from the set.
+	Eg:
+	thisset = {"apple", "banana", "cherry"}
+	thisset.clear()
+	print(thisset)
+	#Output set()
+
+Q51. What is frozen set?
+
+	Python frozenset() method creates an immutable Set object from an iterable. It is a built-in Python function. As it is a set object therefore we cannot have duplicate values in the frozenset.
+	Syntax : frozenset(iterable_object_name)
+
+Q52. How is frozen set different from set?
+
+	Frozen set is just an immutable version of a Python set object. While elements of a set can be modified at any time, elements of the frozen set remain the same after creation. Due to this, frozen sets can be used as keys in Dictionary or as elements of another set.
+
+Q53. What is union() in sets? Explain via code.
+
+	Union() Method returns a new set which contains all the items from the original set.
+
+	Syntax: set1.union(set2, set3, set4….)
+	Parameters: zero or more sets
+	Return: Returns a set, which has the union of all sets(set1, set2, set3…) with set1. It returns a copy of set1 only if no parameter is passed.
+
+	A = {2, 4, 5, 6}
+	B = {4, 6, 7, 8}
+	print("A U B:", A.union(B))
+	#Output {2, 4, 5, 6, 7, 8}
+
+Q54. What is intersection() in sets? Explain via code.
+
+	Return a set that contains the items that exist in both sets.
+
+	A = {2, 4, 5, 6}
+	B = {4, 6, 7, 8}
+	print("A Intersection B:", A.intersection(B))
+	#Output {4, 6}
+
+Q55. What is dictionary in Python?
+
+	Dictionary is the collection of key-value pairs where the value can be any Python object. In contrast, the keys are the immutable Python object, i.e., Numbers, string, or tuple.
+	-Keys must be a single element
+	-Value can be any type such as list, tuple, integer, etc.
+	It is the ordered and mutable data-structure.
+
+Q56. How is dictionary different from all other data structures.
+
+	Dictionary is an unordered collection of the data values that we use for storing the data values, such as a map. Unlike the other DataTypes, which are capable of holding only a single value in the form of an element, a Dictionary is capable of holding the key:value pair.
+
+Q57. How can we delare a dictionary in Python?
+
+	The dictionary can be created by using multiple key-value pairs enclosed with the curly brackets {}, and each key is separated from its value by the colon (:).
+	Eg:
+	Dict = {"Name": "Tom", "Age": 22}
+
+Q58. What will the output of the following?
+```
+var = {}
+print(type(var))
+```
+	#Output <class 'dict'>
+
+Q59. How can we add an element in a dictionary?
+
+	The value can be updated along with key Dict[key] = value. The update() method is also used to update an existing value.
+	Note: If the key-value already present in the dictionary, the value gets updated. Otherwise, the new keys added in the dictionary.
+
+	Dict = {}   
+	Dict[0] = 'First'  
+	Dict[2] = 'Second'  
+	Dict[3] = 'Third'  
+	print(Dict)
+	#Output {0: 'First', 2: 'Second', 3: 'Third'}
+
+	Dict['Emp_ages'] = 20, 33, 24     
+	print(Dict)
+	#Output {0: 'First', 2: 'Second', 3: 'Third', Emp_ages: (20, 33, 24)}
+
+Q60. Create a dictionary and access all the values in that dictionary.
+
+	Dict = {
+	  "brand": "Ford",
+	  "model": "Mustang",
+	  "year": 1964
+	}
+	x = thisdict.values()
+	print(x)
+	#Output dict_values(['Ford', 'Mustang', 1964])
+
+Q61. Create a nested dictionary and access all the element in the inner dictionary.
+
+	myfamily = {
+	  "child1" : {
+		"name" : "Emil",
+		"year" : 2004
+	  },
+	  "parent" : "Hari"
+	}
+	x = myfamily["child1"]
+	print(x)
+
+	#Output {'name': 'Emil', 'year': 2004}
+
+Q62. What is the use of get() function?
+
+	get() method provides a convenient way of getting the value of a key from a dictionary without checking ahead of time whether the key exists, and without raising an error.
+
+Q63. What is the use of items() function?
+
+	items() returns a list of tuples containing the key-value pairs in a dictionary. The first item in each tuple is the key, and the second item is the key’s value
+
+Q64. What is the use of pop() function?
+
+	Removes a key from a dictionary, if it is present, and returns its value.
+
+	If <key> is present in d, d.pop(<key>) removes <key> and returns its associated value:
+
+	If <key> is not in d, and the optional <default> argument is specified, then that value is returned, and no exception is raised.
+	Eg:
+	dict_ex.pop('z', -1)  , here -1 is the argument specified to return if the key is not present in dictionary.
+
+Q65. What is the use of popitems() function?
+
+	The popitem() method removes the item that was last inserted into the dictionary. In versions before 3.7, the popitem() method removes a random item.
+	The removed item is the return value of the popitem() method, as a tuple
+
+Q66. What is the use of keys() function?
+
+	The keys() method returns a view object which contains the keys of the dictionary, as a list.
+
+Q67. What is the use of values() function?
+
+	The values() method returns a view object which contains the values of the dictionary, as a list.
+
+Q68. What are loops in Python?
+
+	A loop is used for executing a block of statements repeatedly until a particular condition is satisfied.
+
+Q69. How many type of loop are there in Python?
+
+	There are two types of loops in Python.
+	i. for
+	ii. while
+	iii. nested loops
+
+Q70. What is the difference between for and while loops?
+
+	while loop executes a set of statements as long as a condition is true.
+
+	for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string).
+
+Q71. What is the use of continue statement?
+
+	The continue statement we can stop the current iteration of the loop, and continue with the next iteration.
+
+Q72. What is the use of break statement?
+
+	The break statement stops the execution of the loop when it encounters break statement and comes out of the loop.
+
+Q73. What is the use of pass statement?
+
+	In Python programming, the pass statement is a null statement which can be used as a placeholder for future code.
+	Suppose we have a loop or a function that is not implemented yet, but we want to implement it in the future. In such cases, we can use the pass statement.
+	
+	Eg:
+	n = 10
+
+	# use pass inside if statement
+	if n > 10:
+		pass
+
+	print('Hello')
+	
+	#Output Hello
+
+Q74. What is the use of range() function?
+
+	The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number.
+
+Q75. How can you loop over a dictionary?
+
+	We can access a dictionary in the following ways.
+
+	1. Access key using the build .keys() 
+		Eg:
+		statesAndCapitals = {
+		'Gujarat': 'Gandhinagar',
+		'Maharashtra': 'Mumbai',
+		'Rajasthan': 'Jaipur',
+		'Bihar': 'Patna'
+		}
+		 
+		keys = statesAndCapitals.keys()
+		print(keys)
+		
+	2. using for loop
+		# Iterating over keys
+		for state in statesAndCapitals:
+			print(state)
+		
+	3. Iterate through all values using .values()
+		# Iterating over values
+		for capital in statesAndCapitals.values():
+			print(capital)
+
+	4. Iterate through all key, and value pairs using items()
+		# Iterating over values
+		for state, capital in statesAndCapitals.items():
+			print(state, ":", capital)
+	5. Access both key and value without using items()
+		# Iterate through all values in a dictionary
+		for i in statesAndCapitals:
+		print(i, '->', statesAndCapitals[i])
+		
+	6. Print items in Key-Value in pair 
+		#Iterating over key-value pairs
+		keys = statesAndCapitals.items()
+		print(keys)
+		
+	7. Access key using unpacking of dict_ex
+		keys = [*statesAndCapitals]
+		values = '{Gujarat}-{Maharashtra}-{Rajasthan}-{Bihar}'.format(*statesAndCapitals, **statesAndCapitals)
+		print(keys)
+		print(values)
+
+
+### Coding problems
+Q76. Write a Python program to find the factorial of a given number.
+
+Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (P*R*T)/100
+
+Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
+
+Q79. Write a Python program to check if a number is prime or not.
+
+Q80. Write a Python program to check Armstrong Number.
+
+Q81. Write a Python program to find the n-th Fibonacci Number.
+
+Q82. Write a Python program to interchange the first and last element in a list.
+
+Q83. Write a Python program to swap two elements in a list.
+
+Q84. Write a Python program to find N largest element from a list.
+
+Q85. Write a Python program to find cumulative sum of a list.
+
+Q86. Write a Python program to check if a string is palindrome or not.
+
+Q87. Write a Python program to remove i'th element from a string.
+
+Q88. Write a Python program to check if a substring is present in a given string.
+
+Q89. Write a Python program to find words which are greater than given length k.
+
+Q90. Write a Python program to extract unquire dictionary values.
+
+Q91. Write a Python program to merge two dictionary.
+
+Q92. Write a Python program to convert a list of tuples into dictionary.
+```
+Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
+```
+
+Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
+```
+Input: list = [9, 5, 6]
+Output: [(9, 729), (5, 125), (6, 216)]
+```
+
+Q94. Write a Python program to get all combinations of 2 tuples.
+```
+Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
+Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
+```
+
+Q95. Write a Python program to sort a list of tuples by second item.
+```
+Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
+Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
+```
+
+Q96. Write a python program to print below pattern.
+```
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+```
+Q97. Write a python program to print below pattern.
+```
+    *
+   **
+  ***
+ ****
+*****
+```
+
+Q98. Write a python program to print below pattern.
+```
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+```
+
+Q99. Write a python program to print below pattern.
+```
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+```
+
+Q100. Write a python program to print below pattern.
+```
+A 
+B B 
+C C C 
+D D D D 
+E E E E E 
+```
