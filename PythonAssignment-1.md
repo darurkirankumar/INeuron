@@ -814,100 +814,62 @@ Q75. How can you loop over a dictionary?
 ### Coding problems
 Q76. Write a Python program to find the factorial of a given number.
 
+	fact_int=int(input("Please enter a number to get factorial "))
+	factorial=1
+	if(fact_int<0):
+		print("No factorial for negative numbers")
+	elif(fact_int==0 & fact_int==1):
+		print("Factorial of number is 1")
+	else:
+		for i in range(1, fact_int+1):
+			factorial=factorial*i
+		print("Factorial of number is ", factorial)
+
 Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (P*R*T)/100
+
+	P=float(input("Enter the Principal amount "))
+	R=float(input("Enter the Interest Rate in decimal or percentage "))
+	T=float(input("Enter the Time in Years "))
+
+	simple_interest=(P*R*T)/100
+	print("The Simple interest for the pprovided values is ", simple_interest)
 
 Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
 
+	P=float(input("Enter the Principal amount "))
+	R=float(input("Enter the Compound Interest Rate in decimal or percentage "))
+	t=float(input("Enter the Time of Principal invested in Years "))
+
+	compound_interest=P*(pow ((1+R/100),t))  
+	print("The Simple interest for the pprovided values is ", compound_interest)
+
 Q79. Write a Python program to check if a number is prime or not.
+
+	num = int(input("Enter a number: "))
+
+	if num > 1:
+	   
+	   for i in range(2,num):
+		   if (num % i) == 0:
+			   print(num,"is not a prime number")
+			   break
+	   else:
+		   print(num,"is a prime number")
+
+	else:
+	   print(num,"is not a prime number")
 
 Q80. Write a Python program to check Armstrong Number.
 
-Q81. Write a Python program to find the n-th Fibonacci Number.
+	num = int(input("Enter a number to check: "))
+	sum = 0
+	temp = num
+	while temp > 0:
+	   digit = temp % 10
+	   sum += digit ** 3
+	   temp //= 10
 
-Q82. Write a Python program to interchange the first and last element in a list.
-
-Q83. Write a Python program to swap two elements in a list.
-
-Q84. Write a Python program to find N largest element from a list.
-
-Q85. Write a Python program to find cumulative sum of a list.
-
-Q86. Write a Python program to check if a string is palindrome or not.
-
-Q87. Write a Python program to remove i'th element from a string.
-
-Q88. Write a Python program to check if a substring is present in a given string.
-
-Q89. Write a Python program to find words which are greater than given length k.
-
-Q90. Write a Python program to extract unquire dictionary values.
-
-Q91. Write a Python program to merge two dictionary.
-
-Q92. Write a Python program to convert a list of tuples into dictionary.
-```
-Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
-Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
-```
-
-Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
-```
-Input: list = [9, 5, 6]
-Output: [(9, 729), (5, 125), (6, 216)]
-```
-
-Q94. Write a Python program to get all combinations of 2 tuples.
-```
-Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
-Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
-```
-
-Q95. Write a Python program to sort a list of tuples by second item.
-```
-Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
-Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
-```
-
-Q96. Write a python program to print below pattern.
-```
-* 
-* * 
-* * * 
-* * * * 
-* * * * * 
-```
-Q97. Write a python program to print below pattern.
-```
-    *
-   **
-  ***
- ****
-*****
-```
-
-Q98. Write a python program to print below pattern.
-```
-    * 
-   * * 
-  * * * 
- * * * * 
-* * * * * 
-```
-
-Q99. Write a python program to print below pattern.
-```
-1 
-1 2 
-1 2 3 
-1 2 3 4 
-1 2 3 4 5
-```
-
-Q100. Write a python program to print below pattern.
-```
-A 
-B B 
-C C C 
-D D D D 
-E E E E E 
-```
+	if num == sum:
+	   print(num,"is an Armstrong number")
+	else:
+	   print(num,"is not an Armstrong number")
