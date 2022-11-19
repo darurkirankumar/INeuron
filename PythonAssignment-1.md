@@ -941,9 +941,20 @@ Q86. Write a Python program to check if a string is palindrome or not.
 
 Q87. Write a Python program to remove i'th element from a string.
 
-
+	a = "Hello, World!"
+	ip=int(input("Enter the index to remove it from string"))
+	if(ip>len(a)):
+		print("index out of bound")
+	print(a.replace(a[ip], ""))
 
 Q88. Write a Python program to check if a substring is present in a given string.
+
+	MyString1 = "Hello there, this is python"
+	ip=(input("Enter Substring: "))
+	if ip in MyString1:
+		print("Yes! it is present in the string")
+	else:
+		print("No! it is not present")
 
 Q89. Write a Python program to find words which are greater than given length k.
 
