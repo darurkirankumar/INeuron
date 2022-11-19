@@ -52,15 +52,15 @@ Q5. What are variable and how can we declare them?
 	* Type of variable can be checked using type() funtion
 	type(variable-name)
 		
-	Q6. How can we take an input from the user in Python?
+Q6. How can we take an input from the user in Python?
 
-	input() is used to take input from the user through the console in Python.
-		Ex: name = input()
-			print("Name is ", name)
+input() is used to take input from the user through the console in Python.
+Ex: name = input()
+print("Name is ", name)
 		
-	We can also include some text to appear in the console to make it easy for the user as follows:
-		Ex: name = input("Please enter your name to proceed further")
-		This will appear in the console as follows 'Please enter your name to proceed further'
+We can also include some text to appear in the console to make it easy for the user as follows:
+	Ex: name = input("Please enter your name to proceed further")
+	This will appear in the console as follows 'Please enter your name to proceed further'
 
 Q7. What is the default datatype of the value that has been taken as an input using input() function?
 
@@ -873,3 +873,148 @@ Q80. Write a Python program to check Armstrong Number.
 	   print(num,"is an Armstrong number")
 	else:
 	   print(num,"is not an Armstrong number")
+
+Q81. Write a Python program to find the n-th Fibonacci Number.
+
+
+
+Q82. Write a Python program to interchange the first and last element in a list.
+
+	thisList = ['1', '2', '4', 'sai']
+	lngth=len(thisList)
+	temp1=thisList[0]
+	thisList[0]=thisList[lngth-1]
+	thisList[lngth-1]=temp1
+
+	print(thisList)
+
+Q83. Write a Python program to swap two elements in a list.
+
+	thisList = ['1', '2', '4', 'sai']
+	x=int(input("Enter first index"))
+	y=int(input("Enter second index"))
+	lngth=len(thisList)
+	if(x|y<0 or x|y>lngth):
+		print("Entered indexes are out of bound")
+		exit()
+	temp1=thisList[x]
+	thisList[x]=thisList[y]
+	thisList[y]=temp1
+
+	print(thisList)
+
+Q84. Write a Python program to find N largest element from a list.
+
+
+	def findMax(list):
+	 
+		max = list[0]
+
+		for x in list:
+			if x > max:
+				max = x
+		return max
+
+	input_string = int(input("Enter list elements seperated by comma: "))
+	lstEx  = input_string.split(",")
+	print("Largest element is:", findMax(lstEx))
+
+Q85. Write a Python program to find cumulative sum of a list.
+
+	list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  
+	cum_list=[]   
+	sum = 0  
+	for x in range(0,len(list)):  
+		sum+=list[x]  
+		cum_list.append(sum)   
+	print(list)      
+	print(cum_list) 
+
+Q86. Write a Python program to check if a string is palindrome or not.
+
+	str = input("Please enter a string: ")
+	length=int(len(str))
+	if(str[0:length-1:1]==str[length-1:0:-1]):
+		print("Palindrome")
+	else:
+		print("Not a Palindrome")
+
+Q87. Write a Python program to remove i'th element from a string.
+
+
+
+Q88. Write a Python program to check if a substring is present in a given string.
+
+Q89. Write a Python program to find words which are greater than given length k.
+
+Q90. Write a Python program to extract unquire dictionary values.
+
+Q91. Write a Python program to merge two dictionary.
+
+Q92. Write a Python program to convert a list of tuples into dictionary.
+```
+Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
+```
+
+Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
+```
+Input: list = [9, 5, 6]
+Output: [(9, 729), (5, 125), (6, 216)]
+```
+
+Q94. Write a Python program to get all combinations of 2 tuples.
+```
+Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
+Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
+```
+
+Q95. Write a Python program to sort a list of tuples by second item.
+```
+Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
+Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
+```
+
+Q96. Write a python program to print below pattern.
+```
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+```
+Q97. Write a python program to print below pattern.
+```
+    *
+   **
+  ***
+ ****
+*****
+```
+
+Q98. Write a python program to print below pattern.
+```
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+```
+
+Q99. Write a python program to print below pattern.
+```
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+```
+
+Q100. Write a python program to print below pattern.
+```
+A 
+B B 
+C C C 
+D D D D 
+E E E E E 
+```
