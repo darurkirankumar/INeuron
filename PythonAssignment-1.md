@@ -958,6 +958,8 @@ Q88. Write a Python program to check if a substring is present in a given string
 
 Q89. Write a Python program to find words which are greater than given length k.
 
+
+
 Q90. Write a Python program to extract unquire dictionary values.
 
 
@@ -1006,6 +1008,13 @@ Q96. Write a python program to print below pattern.
 * * * * 
 * * * * * 
 ```
+
+	ip=int(input("Entr the rows"))
+	for i in range(ip):
+		for j in range(i+1):
+			print("# ",end="")
+		print()
+
 Q97. Write a python program to print below pattern.
 ```
     *
@@ -1014,6 +1023,11 @@ Q97. Write a python program to print below pattern.
  ****
 *****
 ```
+
+	rows = input("ENter the rows to print")
+	for i in range(1, rows+1):
+		print(" " * (rows - i) +"*" * i)
+
 
 Q98. Write a python program to print below pattern.
 ```
@@ -1033,6 +1047,12 @@ Q99. Write a python program to print below pattern.
 1 2 3 4 5
 ```
 
+	ip=int(input("Entr the rows"))
+	for i in range(ip):
+		for j in range(j+1):
+			print(i+1,end="")
+		print()
+
 Q100. Write a python program to print below pattern.
 ```
 A 
@@ -1041,3 +1061,12 @@ C C C
 D D D D 
 E E E E E 
 ```
+
+	ascii_number = 65
+	rows = int(input("Enter rows "))
+	for i in range(0, rows):
+		for j in range(0, i + 1):
+			character = chr(ascii_number)
+			print(character, end=' ')
+		ascii_number += 1
+		print(" ")
