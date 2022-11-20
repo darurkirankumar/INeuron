@@ -960,19 +960,31 @@ Q89. Write a Python program to find words which are greater than given length k.
 
 Q90. Write a Python program to extract unquire dictionary values.
 
+
+
 Q91. Write a Python program to merge two dictionary.
+
+
 
 Q92. Write a Python program to convert a list of tuples into dictionary.
 ```
 Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
 ```
+	myList = [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
+	myDict = dict(myList)
+	print(myDict)
 
 Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
 ```
 Input: list = [9, 5, 6]
 Output: [(9, 729), (5, 125), (6, 216)]
 ```
+	myList = [9, 5, 6]
+	myList2 = []
+	for x in myList:
+		myList2.insert(x, (x, x*x*x))
+	print(myList2)
 
 Q94. Write a Python program to get all combinations of 2 tuples.
 ```
